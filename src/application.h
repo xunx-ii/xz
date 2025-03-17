@@ -1,6 +1,7 @@
 #pragma once
 
 #include "ota.h"
+#include "hv/mqtt_client.h"
 
 class application {
 public:
@@ -21,5 +22,5 @@ private:
     
     ota* ota_server;
 
-    //hv::MqttClient cli;
+    hv::MqttClient mqtt_client;
 };

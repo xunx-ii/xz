@@ -1,16 +1,7 @@
-#include "hv/HttpServer.h"
-using namespace hv;
+#include "application.h"
 
-int main() {
-    HttpService router;
-    router.GET("/", [](HttpRequest* req, HttpResponse* resp) {
-        static char data[] = "0123456789";
-        return resp->Data(data, 10);
-    });
-
-    HttpServer server(&router);
-    server.setPort(48080);
-    server.setThreadNum(64);
-    server.run();
-    return 0;
+int main() 
+{
+    application& app = application::get();
+    return app.run();
 }
