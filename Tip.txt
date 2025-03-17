@@ -1,0 +1,2 @@
+export VCPKG_ROOT=/workspace/vcpkg
+export PATH=$VCPKG_ROOT:$PATH

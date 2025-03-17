@@ -1,0 +1,8 @@
+{
+  "dependencies": [
+    "fmt",
+    "libhv",
+    "nlohmann-json",
+    "spdlog"
+  ]
+}
