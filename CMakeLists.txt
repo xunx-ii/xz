@@ -9,7 +9,11 @@ find_package(libhv CONFIG REQUIRED)
 find_package(nlohmann_json CONFIG REQUIRED)
 find_package(spdlog CONFIG REQUIRED)
 
-add_executable(xz src/main.cpp)
+add_executable(xz 
+    src/main.cpp
+    src/application.cpp
+    src/ota.cpp
+)
 
 target_link_libraries(
     xz 
