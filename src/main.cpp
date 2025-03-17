@@ -2,6 +2,5 @@
 
 int main() 
 {
-    application& app = application::get();
-    return app.run();
+    return application::get().run();
 }
