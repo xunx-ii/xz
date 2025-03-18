@@ -1,3 +1,12 @@
 [submodule "deps/libhv"]
 	path = deps/libhv
 	url = https://github.com/ithewei/libhv.git
+[submodule "deps/spdlog"]
+	path = deps/spdlog
+	url = https://github.com/gabime/spdlog.git
+[submodule "deps/fmt"]
+	path = deps/fmt
+	url = https://github.com/fmtlib/fmt.git
+[submodule "deps/nlohmann_json"]
+	path = deps/nlohmann_json
+	url = https://github.com/nlohmann/json.git

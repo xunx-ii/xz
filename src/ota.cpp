@@ -1,6 +1,7 @@
 #include "ota.h"
-#include <hv/HttpServer.h>
+#include "hv/HttpServer.h"
 
+#include "spdlog/spdlog.h"
 
 ota::ota()
 {
@@ -24,5 +25,6 @@ void ota::listen(int port, int worker_threads)
     ota_server.port = port;
     ota_server.service = &ota_service;
     ota_server.worker_threads = worker_threads;
+    spdlog::info("ota server start!");
     http_server_run(&ota_server, 0);
 }
