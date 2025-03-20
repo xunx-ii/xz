@@ -1,0 +1,86 @@
+OTA会回复的消息
+{
+    "mqtt": {
+        "endpoint": "post-cn-apg3xckag01.mqtt.aliyuncs.com",
+        "client_id": "GID_test@@@88_ae_dd_90_50_98",
+        "username": "Signature|LTAI5tF8J3CrdWmRiuTjxHbF|post-cn-apg3xckag01",
+        "password": "A36Z1YCv3yPb7MIGOoMHMli/FI4=",
+        "publish_topic": "device-server",
+        "subscribe_topic": "devices/88_ae_dd_90_50_98"
+    },
+    "server_time": {
+        "timestamp": 1742440674422,
+        "timezone_offset": 480
+    },
+    "firmware": {
+        "version": "1.4.6",
+        "url": "https://xiaozhi-voice-assistant.oss-cn-shenzhen.aliyuncs.com/firmwares/v1.4.6_bread-compact-wifi/xiaozhi.bin"
+    },
+    "activation": {
+        "code": "702334",
+        "message": "xiaozhi.me\n702334"
+    }
+}
+
+OTA请求
+{
+        "flash_size": 16777216,  # 闪存大小 (16MB)
+        "minimum_free_heap_size": 8318916,  # 最小可用堆内存
+        "mac_address": "88_ae_dd_90_50_98",  # 设备 MAC 地址
+        "chip_model_name": "esp32s3",  # 芯片型号
+        "chip_info": {
+            "model": 9,
+            "cores": 2,
+            "revision": 2,
+            "features": 18
+        },
+        "application": {
+            "name": "xiaozhi",
+            "version": "0.9.9"
+        },
+        "partition_table": [],  # 省略分区表信息
+        "ota": {
+            "label": "factory"
+        },
+        "board": {
+            "type": "bread-compact-wifi",
+            "ip": "192.168.124.38",
+            "mac": "88_ae_dd_90_50_98"
+        }
+}
+
+# 音频传输配置
+aes_opus_info = {
+    "type": "hello",
+    "version": 3,
+    "transport": "udp",
+    "udp": {
+        "server": "120.24.160.13",
+        "port": 8884,
+        "encryption": "aes-128-ctr",
+        "key": "263094c3aa28cb42f3965a1020cb21a7",
+        "nonce": "01000000ccba9720b4bc268100000000"
+    },
+    "audio_params": {
+        "format": "opus",
+        "sample_rate": 24000,
+        "channels": 1,
+        "frame_duration": 60
+    },
+    "session_id": "b23ebfe9"
+}
+
+发送设备握手协议
+
+{
+    "type": "hello",
+    "version": 3,
+    "transport": "udp",
+    "audio_params": 
+    {
+        "format": "opus",
+        "sample_rate": 16000,  # 16kHz采样率
+        "channels": 1,  # 单声道
+        "frame_duration": 60  # 60ms帧时长
+    }
+}

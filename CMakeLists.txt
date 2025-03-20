@@ -15,11 +15,15 @@ add_executable(xz
     src/ota.cpp
 )
 
+include_directories(${ORT_INCLUDE_DIR})
+
 target_link_libraries(
     xz 
     PRIVATE 
     hv_static
     spdlog
     fmt
+    ${ONNXRUNTIME_LIBRARY}
+    ${ONNXRUNTIME_PROVIDERS_LIBRARY}
     nlohmann_json::nlohmann_json
 )
