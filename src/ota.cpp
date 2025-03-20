@@ -4,7 +4,7 @@
 #include "spdlog/spdlog.h"
 #include <string>
 
-ota::ota() { listen_port = 3000; }
+ota::ota() { listen_port = 41300; }
 
 ota::~ota() {}
 
